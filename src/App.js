@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './i18n';
 import './App.css';
 import { Header } from './components/Header';
@@ -21,13 +21,11 @@ function HomePage() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/generate" element={<ApiGenerator />} />
-        <Route path="/api-docs" element={<ApiDocs />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/generate" element={<ApiGenerator />} />
+      <Route path="/api-docs" element={<ApiDocs />} />
+    </Routes>
   );
 }
 
